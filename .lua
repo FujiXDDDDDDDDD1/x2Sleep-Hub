@@ -2528,3 +2528,8 @@ Section:NewButton("Hack", "ButtonInfo", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Maxiiiiiiiiiiiiiiiiiiiiiii/spaceware/main/spaceware", true))()
 end)
 
+local Section = Tab:NewSection("Hide UI")
+
+Section:NewKeybind("Hide UI", "Fu Kang Hub", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
