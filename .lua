@@ -1,42 +1,10 @@
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("ImageLabel")
-local TextLabel = Instance.new("TextLabel")
-
---Properties:
-
-ScreenGui.Parent = game:GetService("CoreGui")
-
-Frame.Name = "Frame"
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BackgroundTransparency = 1.000
-Frame.Position = UDim2.new(-0.254758418, 0, -0.37299037, 0)
-Frame.Size = UDim2.new(0, 2061, 0, 1048)
-Frame.Image = "rbxassetid://3570695787"
-Frame.ImageColor3 = Color3.fromRGB(129, 197, 255)
-Frame.ScaleType = Enum.ScaleType.Slice
-Frame.SliceCenter = Rect.new(100, 100, 100, 100)
-Frame.SliceScale = 0.120
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(0, 137, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.419472903, 0, 0.443729907, 0)
-TextLabel.Size = UDim2.new(0, 219, 0, 70)
-TextLabel.Font = Enum.Font.SpecialElite
-TextLabel.Text = "โลมาเป็นเบาหวาน"
-TextLabel.TextColor3 = Color3.fromRGB(0, 137, 255)
-TextLabel.TextSize = 100.000
-TextLabel.TextStrokeTransparency = 0.000
-wait(2)
-game.CoreGui:FindFirstChild("ScreenGui"):Destroy()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("x2Sleep Hub", "BloodTheme")
+local Window = Library.CreateLib("Fu Kang Hub Premium", "Sentinel")
 
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Main")
 
-Section:NewButton("Update 22/04/23", "Update Fu Kang Hub V1", function()
+Section:NewButton("Update 21/04/23", "Update Fu Kang Hub V1", function()
 end)
 
 local Tab = Window:NewTab("Scripts")
@@ -112,6 +80,12 @@ Section:NewButton("Driving Empire", "Fu Kang Hub", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FujiXDDDDDDDDD1/Fu-Kang-Hub/main/Driving%20Empire"))()
 end)
 
+local Section = Tab:NewSection("RO-Wizard")
+
+Section:NewButton("RO-Wizard", "Fu Kang Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FujiXDDDDDDDDD1/Fu-Kang-Hub/main/RO-Wizard"))()
+ end)
+
 local Tab = Window:NewTab("Teleport")
 local Section = Tab:NewSection("Select Player!")
 Plr = {}
@@ -152,6 +126,7 @@ end)
 Section:NewButton("Refresh Dropdown","Fu Kang Hub", function()
   drop:Refresh(Plr)
 end)
+
 
 local Tab = Window:NewTab("Misc")
 local Section = Tab:NewSection("Misc")
@@ -846,7 +821,7 @@ end)
 local Tab = Window:NewTab("Settings")
 local Section = Tab:NewSection("Hide UI")
 
-Section:NewKeybind("Hide UI", "Fu Kang Hub", Enum.KeyCode.RightAlt, function()
+Section:NewKeybind("Hide UI", "Fu Kang Hub", Enum.KeyCode.P, function()
 	Library:ToggleUI()
 end)
 
